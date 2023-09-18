@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-image: url("https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_fsr8al91ct_confeti-1024x683.jpg.webp");
+  background-size: cover; /* Ajustar la imagen para cubrir la tarjeta */
+  background-position: center; /* Centrar la imagen */
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .title {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.302);
+    width: 100%;
+    height: 100px;
+    color: white;
+  }
+}

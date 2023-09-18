@@ -1,0 +1,10 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Columnas autoajustables */
+  width: 100%;
+  gap: 20px; /* Espacio entre elementos */
+  padding: 0;
+}

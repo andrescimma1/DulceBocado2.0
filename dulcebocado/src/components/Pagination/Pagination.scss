@@ -1,0 +1,32 @@
+.container {
+  margin-top: 6rem;
+  padding: 0 1rem;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  background-color: #d291bc;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    background-color: #976988;
+  }
+  &:disabled {
+    opacity: 0.5;
+    transition: opacity 300ms;
+  }
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}

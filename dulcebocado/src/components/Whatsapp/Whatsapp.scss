@@ -1,0 +1,8 @@
+.container {
+  position: fixed;
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+  right: 20px; /* Ajusta la distancia desde la derecha */
+  z-index: 9999; /* Ajusta la posición en el eje Z para que esté por encima de otros elementos */
+  width: 30px;
+  height: 30px;
+}
