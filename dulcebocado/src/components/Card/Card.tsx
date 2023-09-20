@@ -1,8 +1,13 @@
 import React from "react";
 import "./Card.scss";
 
+interface Item {
+  id: number;
+  name: string;
+}
+
 interface Props {
-  item: any;
+  item: Item;
 }
 
 const Card: React.FC<Props> = ({ item }) => {

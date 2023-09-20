@@ -35,8 +35,42 @@ const Pagination = () => {
     setCurrentPage(page);
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(""); // Estado para almacenar la opción seleccionada
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleOptionClick = (option: any) => {
+    setSelectedOption(option);
+    setIsOpen(false);
+  };
+
   return (
     <div className="container">
+      <div
+        className={`custom-dropdown ${isOpen ? "open" : ""}`}
+        onClick={toggleDropdown}
+      >
+        <div className="dropdown-header">
+          {selectedOption || "Selecciona una opción"}
+        </div>
+        <div className="dropdown-options">
+          <div className="option" onClick={() => handleOptionClick("Tortas")}>
+            Tortas
+          </div>
+          <div
+            className="option"
+            onClick={() => handleOptionClick("Alfajores")}
+          >
+            Alfajores
+          </div>
+          <div className="option" onClick={() => handleOptionClick("Tartas")}>
+            Tartas
+          </div>
+        </div>
+      </div>
       <Cards items={displayedItems} />
       {/* Paginación */}
       <div className="pagination">
